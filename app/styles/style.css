@@ -728,6 +728,7 @@ footer{
     background: #fff;
     border-radius: 10px;
     padding: 20px;
+    box-shadow: 4px 4px 4px #0000001a;
 }
 
 .expertise_content_wrapper .feature_col .feature_icon img{
@@ -929,3 +930,124 @@ footer{
     width: 100%;
 }
   }
+
+
+.industry_wrapper{
+    background: #E2EEFF;
+}
+
+  .industry_content_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+}
+
+.industry_content_wrapper .industry_col{
+   flex: 0 0 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 4px 4px 4px #0000001a;
+}
+
+.industry_content_wrapper .industry_col .industry_icon img{
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.industry_content_wrapper .industry_col .industry_content{
+    margin-top: 20px;
+}
+
+.industry_content_wrapper .industry_col .industry_content .industry_title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #0952BA;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1025px){
+    .industry_content_wrapper .industry_col{
+   flex: 0 0 calc(33.33% - 13.33px); /* subtract ~2/2 of total gap */
+    max-width: calc(33.33% - 13.33px);
+}
+}
+
+@media screen and (max-width: 992px){
+    .industry_content_wrapper .industry_col .industry_content .industry_title{
+    font-size: 18px;
+}
+
+.industry_content_wrapper .industry_col .industry_content .industry_para{
+    font-size: 14px;
+}
+
+
+}
+
+@media screen and (max-width: 768px){
+    .industry_content_wrapper .industry_col{
+   flex: 0 0 calc(50% - 10px); /* subtract ~2/2 of total gap */
+    max-width: calc(50% - 10px);
+}
+}
+
+@media screen and (max-width: 600px){
+    .industry_content_wrapper .industry_col{
+   flex: 0 0 100%; /* subtract ~2/3 of total gap */
+    max-width: 100%;
+}
+}
+
+/* CTA CSS */
+.cta_wrapper{
+    height: 350px;
+    width: 100%;
+    position: relative;
+}
+
+.cta_wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta_content{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.cta_content .cta_heading{
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+}
+
+@media screen and (max-width: 1025px){
+    .cta_content .cta_heading{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cta_wrapper{
+        height: 250px;
+    }
+
+    .cta_content{
+        padding: 0 15px;
+    }
+
+    .cta_content .cta_heading{
+        font-size: 26px;
+    }
+}
