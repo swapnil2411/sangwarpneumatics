@@ -31,7 +31,7 @@ export default function Hero() {
     ];
 
     return (
-        <section className="relative h-[70vh] md:h-[90vh]">
+        <section className="relative h-[50vh] md:h-[90vh]">
             <Swiper
                 modules={[Pagination, Navigation]}
                 // autoplay={{ delay: 4000 }}
