@@ -40,7 +40,9 @@ const cardVariants = {
                                     <Link 
                                         href={`/products/${item?.slug}`}
                                     >
-                                        <img src={item?.image} alt={item?.image} />
+                                        <figure className="image_wrapper">
+                                            <img src={item?.image} alt={item?.category} />
+                                        </figure>
                                         <h3 className="category_heading">{item?.category}</h3>
                                     </Link>
                                 </motion.div>

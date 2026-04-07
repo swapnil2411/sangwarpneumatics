@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 import FeatureCard from "@/components/common/FeatureCard";
 export default function IndustryContent(){
     const industriesData = [
@@ -26,13 +29,37 @@ export default function IndustryContent(){
     description: "High-precision systems for critical and sensitive applications",
   },
 ];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 60, scale: 1 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.5 },
+  },
+};
     return(
-        <div className="industry_content_wrapper sec_pad">
+        <motion.div className="industry_content_wrapper sec_pad" variants={containerVariants}>
             {
                 industriesData?.map((item, idx) => {
                     return(
-                        <FeatureCard key={item?.id}>
-                    <div className="industry_col">
+                        <motion.div className="industry_col" key={idx} variants={cardVariants} initial={{ opacity: 0, y: 60, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{
+        duration: 0.5,
+        delay: idx * 0.1, // 🔥 THIS creates one-by-one effect
+      }}
+      viewport={{ once: true, amount: 0.3 }}>
                         <div className="industry_icon">
                             <img src={item?.image} alt={item?.image} />
                         </div>
@@ -40,11 +67,10 @@ export default function IndustryContent(){
                             <h3 className="industry_title">{item?.title}</h3>
                             <p className="industry_para">{item?.description}</p>
                         </div>
-                    </div>
-                </FeatureCard>
+                    </motion.div>
                     )
                 })
             }
-        </div>
+        </motion.div>
     )
 }

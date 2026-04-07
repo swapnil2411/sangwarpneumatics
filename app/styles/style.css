@@ -950,11 +950,23 @@ footer{
     box-sizing: border-box;
     background: #fff;
     border-radius: 10px;
-    position: relative;
     cursor: pointer;
+    position: relative;
 }
 
-.products_content_wrapper .product_col::after{
+.products_content_wrapper .product_col img{
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    display: block;
+}
+
+.products_content_wrapper .product_col .image_wrapper{
+    position: relative;
+}
+
+
+.products_content_wrapper .product_col .image_wrapper::after{
     content: '';
     position: absolute;
     display: block;
@@ -964,11 +976,6 @@ footer{
     width: 100%;
     background: #000;
     opacity: 0.3;
-    border-radius: 10px;
-}
-
-.products_content_wrapper .product_col img{
-    width: 100%;
     border-radius: 10px;
 }
 
