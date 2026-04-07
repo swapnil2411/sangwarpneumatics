@@ -57,6 +57,8 @@
     background: #E2EEFF;
 }
 
+
+
 .testimonial_item{
     padding: 25px 15px;
     border: 1px solid #E2EEFF;
@@ -79,3 +81,7 @@
     height: unset !important;
 }
 
+
+.testimonial_swiper .swiper-button-next{
+    right: 0 !important;
+}

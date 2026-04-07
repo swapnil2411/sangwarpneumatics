@@ -1,0 +1,92 @@
+.contact_info_col{
+    padding: 12px;
+    border: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.contact_info_col span svg{
+    width: 28px;
+    max-width: 28px;
+    color: #0952BA;
+    margin-right: 10px;
+}
+
+.contact_info_col a{
+    color: #000;
+    text-decoration: none;
+    display: block;
+    word-wrap: break-word;
+}
+
+.contact_info_col iframe{
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+}
+
+.contact_form_wrapper .form_container{
+    padding: 12px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+}
+
+.contact_form_wrapper .form_container .form_element label{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.contact_form_wrapper .form_container .form_element input{
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact_form_wrapper .form_container .form_element textarea{
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.contact_form_wrapper .form_container .form_element .react_select__control{
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.contact_form_wrapper .form_container .react_select__indicator-separator{
+    display: none;
+}
+
+.contact_form_wrapper .form_container .fill_btn{
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .contact_info_col{
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 14px;
+    }
+
+    .contact_info_col span svg{
+        margin-bottom: 8px;
+    }
+}
+
+.contact_form_wrapper .form_container .form_element label,
+.contact_form_wrapper .form_container .form_element input,
+.contact_form_wrapper .form_container .form_element textarea{
+    font-size: 14px;
+}

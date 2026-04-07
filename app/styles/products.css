@@ -1,0 +1,18 @@
+.sub_products_wrapper .heading{
+    font-size: 24px;
+    font-weight: 600;
+    color: #0952BA;
+    margin-bottom: 20px;
+}
+
+.sub_products_wrapper ul li{
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 8px; 
+    padding: 10px;
+    border: 1px solid #E0E0E0;
+}
+
+.sub_products_wrapper ul li span{
+    margin-left: 8px;
+}

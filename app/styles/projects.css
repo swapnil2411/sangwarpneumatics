@@ -1,0 +1,88 @@
+
+.projects_col{
+    padding: 15px;
+    border: 1px solid #E0E0E0;
+    text-align: center;
+}
+
+.projects_col:hover{
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects_col .client_name{
+    font-size: 20px;
+    font-weight: 600;
+    color: #0952BA;
+    margin-top: 20px;
+}
+
+.projects_col .project_title{
+    font-size: 16px;
+    color: #000;
+    margin-top: 10px;
+}
+
+.project_modal{
+    padding: 20px;
+    text-align: center;
+}
+
+.project_modal img{
+    margin: 0 auto 20px;
+}
+
+.project_modal .project_modal_title{
+    font-size: 20px;
+    color: #0952BA;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project_modal .project_modal_description{
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.project_modal .modal_close_btn{
+    background: #E0E0E0;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+    .projects_grid{
+    padding-top: 25px;
+}
+}
+
+@media screen and (max-width: 768px){
+    .projects_col .client_name{
+        font-size: 18px;
+    }
+
+    .projects_col .project_title{
+        font-size: 14px;
+    }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease;
+}
