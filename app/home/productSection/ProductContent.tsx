@@ -17,7 +17,7 @@ export default function ProductContent(){
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 60, scale: 0.95 },
+  hidden: { opacity: 0, y: 60, scale: 1 },
   visible: {
     opacity: 1,
     y: 0,
@@ -26,14 +26,17 @@ const cardVariants = {
   },
 };
     return(
-        <motion.div className="products_content_wrapper sec_pad" variants={containerVariants}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
+        <motion.div className="products_content_wrapper sec_pad" variants={containerVariants} >
                     {
                         productCategories?.map((item, idx) => {
                             return (
-                                <motion.div className="product_col" variants={cardVariants} key={item?.slug}>
+                                <motion.div className="product_col" variants={cardVariants} key={item?.slug} initial={{ opacity: 0, y: 60, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{
+        duration: 0.5,
+        delay: idx * 0.1, // 🔥 THIS creates one-by-one effect
+      }}
+      viewport={{ once: true, amount: 0.3 }}>
                                     <Link 
                                         href={`/products/${item?.slug}`}
                                     >

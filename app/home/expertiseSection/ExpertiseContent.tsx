@@ -13,7 +13,7 @@ export default function ExpertiseContent() {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 60, scale: 0.95 },
+  hidden: { opacity: 0, y: 60, scale: 1 },
   visible: {
     opacity: 1,
     y: 0,
@@ -60,14 +60,17 @@ const cardVariants = {
         }
     ]
     return (
-        <motion.div className="expertise_content_wrapper sec_pad"  variants={containerVariants}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
+        <motion.div className="expertise_content_wrapper sec_pad"  variants={containerVariants}>
             {
                 expertiseData?.map((item, idx) => {
                     return (
-                        <motion.div variants={cardVariants} key={item?.id} className="feature_col">
+                        <motion.div variants={cardVariants} key={item?.id} className="feature_col" initial={{ opacity: 0, y: 60, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{
+        duration: 0.5,
+        delay: idx * 0.1, // 🔥 THIS creates one-by-one effect
+      }}
+      viewport={{ once: true, amount: 0.3 }}>
                             <div className="feature_icon">
                                     <img src={item?.icon} alt={item?.icon} />
                                 </div>
