@@ -91,3 +91,15 @@
 
 //   return NextResponse.json({ success: true });
 // }
+
+import { NextResponse } from 'next/server';
+
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    // handle body (e.g. validate, send email, save to DB)
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
+  }
+}
