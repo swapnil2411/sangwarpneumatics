@@ -113,41 +113,50 @@ type SelectOption = {
     setForm((prev) => ({ ...prev, [key]: value }));
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
+
+  try {
     setLoading(true);
-    setErrors({});
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
 
-      const data = await res.json();
+    const data = await res.json();
 
-      if (!res.ok) {
-        setErrors(data.errors || {});
-      } else {
-        setForm({
-          fullName: "",
-          companyName: "",
-          email: "",
-          phone: "",
-          address: "",
-          product: "",
-          message: "",
-        });
-        toast.success("Form submitted successfully");
-      }
-    } catch (err) {
-      console.log(err);
-       toast.error("Failed to submit form");
-    }finally {
-      setLoading(false);
+    if (!res.ok) {
+      setErrors(data.errors || {});
+      toast.error("Please fix form errors");
+      return;
     }
-  };
+
+    toast.success("Form submitted successfully");
+
+    setForm({
+      fullName: "",
+      companyName: "",
+      email: "",
+      phone: "",
+      address: "",
+      product: "",
+      message: "",
+    });
+
+  } catch (error) {
+    console.log(error);
+
+    toast.error("Something went wrong");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <>
