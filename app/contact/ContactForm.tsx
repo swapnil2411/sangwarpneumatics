@@ -218,7 +218,7 @@ type SelectOption = {
 
         <div className="form_element">
           <label htmlFor="subject">Product Interested In</label>
-          <Select
+          {/* <Select
             options={productOptions}
             placeholder="Select a Product"
             className="react_select_container"
@@ -226,7 +226,21 @@ type SelectOption = {
             onChange={(option) =>
     handleChange("product", option?.value || "")
   }
-          />
+          /> */}
+          <Select<SelectOption>
+  options={productOptions}
+  placeholder="Select a Product"
+  className="react_select_container"
+  classNamePrefix="react_select"
+  value={
+    productOptions.find(
+      (option) => option.value === form.product
+    ) || null
+  }
+  onChange={(option) =>
+    handleChange("product", option?.value || "")
+  }
+/>
           {errors.product && <p className="text-red-500 text-sm">{errors.product[0]}</p>}
         </div>
 
