@@ -120,6 +120,7 @@ type SelectOption = {
 
   try {
     setLoading(true);
+console.log("START");
 
     const res = await fetch("/api/contact", {
       method: "POST",
@@ -129,6 +130,7 @@ type SelectOption = {
       body: JSON.stringify(form),
     });
 
+    console.log("RESPONSE RECEIVED");
     const data = await res.json();
 
     if (!res.ok) {
@@ -154,15 +156,14 @@ type SelectOption = {
 
     toast.error("Something went wrong");
   } finally {
+    console.log("LOADER HIDE");
     setLoading(false);
   }
 };
 
   return (
     <>
-      {loading && (
-        <PageLoader />
-      )}
+       <PageLoader loading={loading} />
 
       <form onSubmit={handleSubmit} className="contact_form_wrapper">
       <div className="form_container grid gap-4">
