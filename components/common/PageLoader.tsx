@@ -12,11 +12,7 @@ export default function PageLoader() {
   useEffect(() => {
     setLoading(true);
 
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 500);
-
-    return () => clearTimeout(timer);
+    
   }, [pathname]);
 
   if (!loading) return null;
