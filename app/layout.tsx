@@ -5,6 +5,8 @@ import "./styles/style.css";
 import "./styles/aboutus.css";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
+import PageLoader from "@/components/common/PageLoader";
+import { Toaster } from "react-hot-toast";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -29,6 +31,10 @@ export default function RootLayout({
     >
       
       <body className="min-h-full">
+         <Toaster position="bottom-center" toastOptions={{
+          duration: 5000,
+         }} />
+        <PageLoader />
         <Navbar />
         {children}
         <Footer />

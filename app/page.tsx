@@ -10,6 +10,8 @@ import Cta from "./home/Cta";
 import ProjectSection from "./home/projectSection/page";
 
 export default function Home() {
+  console.log("PRIVATE KEY START:");
+  console.log(process.env.FIREBASE_PRIVATE_KEY?.slice(0, 50));
   return (
     <>
       <Hero />
