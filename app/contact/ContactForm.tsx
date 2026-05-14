@@ -112,7 +112,7 @@ type SelectOption = {
     setForm((prev) => ({ ...prev, [key]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setErrors({});
