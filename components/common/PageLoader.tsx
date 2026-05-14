@@ -11,7 +11,14 @@ export default function PageLoader() {
 
   useEffect(() => {
     setLoading(true);
+const handleComplete = () => {
+      setLoading(false);
+    };
 
+    // small delay for smooth UX
+    const timeout = setTimeout(handleComplete, 800);
+
+    return () => clearTimeout(timeout);
     
   }, [pathname]);
 
