@@ -72,14 +72,22 @@ import dynamic from "next/dynamic";
 import { TailSpin } from "react-loader-spinner";
 import PageLoader from "@/components/common/PageLoader";
 import toast from "react-hot-toast";
-
-const Select = dynamic(() => import("react-select"), {
-  ssr: false,
-});
+import Select from "react-select";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<{
+  fullName?: string;
+  email?: string;
+  phone?: string;
+  product?: string;
+  message?: string;
+}>({});
+
+type SelectOption = {
+  label: string;
+  value: string;
+};
 
   const [form, setForm] = useState({
     fullName: "",
@@ -91,7 +99,7 @@ export default function ContactForm() {
     message: "",
   });
 
-  const productOptions = [
+  const productOptions: SelectOption[] = [
     { value: "Air Filtration & Purification Systems", label: "Air Filtration & Purification Systems" },
     { value: "Heatless Dehumidifier", label: "Heatless Dehumidifier" },
     { value: "Compressed Air Dryers", label: "Compressed Air Dryers" },
@@ -100,7 +108,7 @@ export default function ContactForm() {
     { value: "Others", label: "Others" },
   ];
 
-  const handleChange = (key, value) => {
+  const handleChange = (key: string, value: string) => {
     setForm((prev) => ({ ...prev, [key]: value }));
   };
 
@@ -156,7 +164,7 @@ export default function ContactForm() {
             onChange={(e) => handleChange("fullName", e.target.value)}
             placeholder="Enter Full Name"
           />
-          {errors.fullName && <p className="text-red-500 text-sm">{errors.fullName[0]}</p>}
+          {errors.fullName && <p className="text-red-500 text-sm">{errors.fullName}</p>}
         </div>
 
         <div className="form_element">
@@ -205,7 +213,9 @@ export default function ContactForm() {
             placeholder="Select a Product"
             className="react_select_container"
             classNamePrefix="react_select"
-            onChange={(option) => handleChange("product", option?.value || "")}
+            onChange={(option) =>
+    handleChange("product", option?.value || "")
+  }
           />
           {errors.product && <p className="text-red-500 text-sm">{errors.product[0]}</p>}
         </div>
