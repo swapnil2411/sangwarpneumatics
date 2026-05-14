@@ -5,7 +5,7 @@ import "./styles/style.css";
 import "./styles/aboutus.css";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
-import PageLoader from "@/components/common/PageLoader";
+import RouteLoader from "@/components/common/RouteLoader";
 import { Toaster } from "react-hot-toast";
 
 const roboto = Roboto({
@@ -34,7 +34,7 @@ export default function RootLayout({
          <Toaster position="bottom-center" toastOptions={{
           duration: 5000,
          }} />
-        <PageLoader />
+        <RouteLoader />
         <Navbar />
         {children}
         <Footer />
