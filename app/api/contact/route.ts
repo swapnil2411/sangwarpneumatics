@@ -4,7 +4,7 @@ import { contactSchema } from "@/lib/validations/contactSchema";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req) {
+export async function POST(req: Request) {
   try {
     const body = await req.json();
 
@@ -32,7 +32,7 @@ export async function POST(req) {
     // ✅ Send email to admin
     await resend.emails.send({
       from: "Sangawar Website <onboarding@resend.dev>",
-      to: process.env.CLIENT_EMAIL,
+      to: process.env.CLIENT_EMAIL || "",
       subject: "New Contact Form Lead",
       html: `
         <h2>New Inquiry</h2>
