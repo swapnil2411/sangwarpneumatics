@@ -67,6 +67,7 @@
 "use client";
 
 import { useState } from "react";
+import type { FormEvent } from "react";
 import Button from "@/components/common/Button";
 import dynamic from "next/dynamic";
 import { TailSpin } from "react-loader-spinner";
