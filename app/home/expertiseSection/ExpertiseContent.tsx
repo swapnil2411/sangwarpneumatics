@@ -24,38 +24,38 @@ const cardVariants = {
     const expertiseData = [
         {
             id: 1,
-            title: "Pneumatics",
-            desc: "Advanced compressed air and automation systems for industrial efficiency.",
+            title: "Pneumatic Systems",
+            desc: "Compressed air dryers, automation systems & pneumatic controls engineered for industrial efficiency.",
             icon: "/assets/pneumatics.png"
         },
         {
             id: 2,
-            title: "Hydraulics",
-            desc: "High-performance hydraulic systems designed for precision and durability.",
+            title: "Hydraulic Systems",
+            desc: "High-performance hydraulic cylinders, power packs & scissor lifts designed for precision and durability.",
             icon: "/assets/hydraulics.png"
         },
         {
             id: 3,
-            title: "Dehumidification",
-            desc: "Energy-efficient moisture control solutions with patented technology.",
+            title: "Dehumidification Systems",
+            desc: "Patented heatless dehumidifiers delivering 50%+ energy savings for pharma, food & industrial use.",
             icon: "/assets/dehumidification.png"
         },
         {
             id: 4,
-            title: "Filtration Systems",
-            desc: "Air, gas, oil, and water filtration solutions for clean operations.",
+            title: "Industrial Filtration",
+            desc: "Air, gas, oil, water & chemical filtration systems built for clean, contamination-free operations",
             icon: "/assets/filtration.png"
         },
         {
             id: 5,
-            title: "Automation",
-            desc: "Custom process automation systems to improve productivity & reduce manual work.",
+            title: "Process Automation",
+            desc: "Custom pneumatic & hydraulic automation systems that improve productivity and eliminate manual work.",
             icon: "/assets/automation.png"
         },
         {
             id: 6,
-            title: "Material Handling",
-            desc: "Engineered solutions for safe and efficient material movement.",
+            title: "Material Handling Systems",
+            desc: "Engineered cranes, grab buckets & hydraulic platforms for safe and efficient industrial material movement.",
             icon: "/assets/cargo-handling.png"
         }
     ]

@@ -53,7 +53,15 @@ export default function OurMission() {
             viewport={{ once: true }}
           >
             <p className="content_para">
-                 Our mission is to design, develop, and deliver innovative, energy-efficient pneumatic, hydraulic, and automation solutions that empower industries to achieve higher productivity, reliability, and operational excellence. We are committed to combining advanced engineering practices with precision manufacturing to create systems that not only enhance performance but also significantly reduce operational costs and energy consumption. Through continuous innovation, technical expertise, and a customer-first approach, we aim to provide customized solutions that address complex industrial challenges. At Sangawar Pneumatics, we strive to build long-term partnerships by consistently delivering quality, reliability, and value-driven engineering solutions that exceed expectations and contribute to the sustainable growth of our clients.
+                 Our mission is to design, manufacture, and deliver engineering systems 
+that give our clients measurable value — lower energy costs, higher 
+operational reliability, and complete peace of mind on every project 
+we undertake.
+
+We combine advanced engineering with precision manufacturing to build 
+systems that don't just perform — they outperform. From concept and 
+design through to installation, commissioning, and operator training, 
+we take complete ownership of every project, every time.
             </p>
           </motion.div>
 

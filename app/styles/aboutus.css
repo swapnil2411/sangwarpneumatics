@@ -23,6 +23,10 @@
     max-width: calc(50% - 20px);
 }
 
+.about_us_area .img_area img{
+    border-radius: 20px;
+}
+
 @media screen and (max-width: 992px){
     .about_us_area .content_area .content_heading{
         font-size: 24px;

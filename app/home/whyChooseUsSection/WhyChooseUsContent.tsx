@@ -8,39 +8,39 @@ export default function WhyChooseUsContent() {
   const highlightList: AccordionItem[] = [
     {
       id: "energy-efficient",
-      title: "Energy Efficient Solutions",
+      title: "Patented Energy-Saving Technology",
       icon: "/assets/thunder.png",
-      content: <p>Up to 50% energy savings with our patented dehumidification systems.</p>,
+      content: <p>Our patented heatless dehumidifier delivers over 50% energy savings compared to conventional systems — with a World Patent application filed. Lower running costs, same industrial-grade performance.</p>,
     },
     {
       id: "end-to-end-engineering",
-      title: "End-to-End Engineering",
+      title: "Complete Turnkey Engineering",
       icon: "/assets/skill.png",
-      content: <p>From design to installation — complete turnkey solutions.</p>,
+      content: <p>We handle everything in-house — design, fabrication, installation, commissioning, and operator training. One team, one point of contact, zero gaps.</p>,
     },
     {
       id: "technical-expertise",
-      title: "Technical Expertise",
+      title: "Dual-Qualified Engineering Team",
       icon: "/assets/expertise.png",
-      content: <p>Strong expertise in pneumatics, hydraulics, and automation systems.</p>,
+      content: <p>Founded by Mr. Pramod Sangawar (B.E. Mechanical & Electrical, MBA) and strengthened by Mr. Pratik Sangawar (B.E. Electrical, Masters in Industrial Safety) — deep multi-discipline expertise on every project.</p>,
     },
     {
       id: "advanced-infrastructure",
-      title: "Advanced Infrastructure",
+      title: "Modern Manufacturing Facility",
       icon: "/assets/infrastucture.png",
-      content: <p>Modern manufacturing facility with precision equipment in Vasai.</p>,
+      content: <p>Our Vasai factory houses lathe machines, welding units, hydraulic press, precision measuring equipment, and a 10-tonne overhead crane — all under one roof for full quality control.</p>,
     },
     {
       id: "trusted-by-leaders",
-      title: "Trusted by Industry Leaders",
+      title: "Trusted by ISRO, BARC & NPCIL",
       icon: "/assets/leadership.png",
-      content: <p>Successfully delivered projects for ISRO, BARC, NPCIL, and more.</p>,
+      content: <p>We've delivered systems for Chandrayaan III (ISRO), nuclear handling platforms (NPCIL), radiation shields (BARC), and decoy launching systems for the Indian Navy.</p>,
     },
     {
       id: "customized-solutions",
-      title: "Customized Solutions",
+      title: "Every System Built to Specification",
       icon: "/assets/solution.png",
-      content: <p>Tailor-made systems designed for your specific industrial needs.</p>,
+      content: <p>No standard catalogues. Every system is engineered from scratch to match your exact flow rate, pressure, environment, and application requirements.</p>,
     },
   ];
 

@@ -12,21 +12,24 @@ export default function Hero() {
     const slides = [
         {
             image: "/assets/hero-01.png",
-            title: "Engineering Precision.",
-            subtitle: "Powering Performance.",
-            desc: "Advanced Pneumatic, Hydraulic & Automation Solutions designed to maximize efficiency and reliability across industries.",
+            altText: "Industrial engineer operating pneumatic equipment at Sangawar Pneumatics manufacturing facility in Vasai, Maharashtra",
+            title: "India's Trusted Manufacturer.",
+            subtitle: "Pneumatics. Hydraulics. Results.",
+            desc: "Compressed air dryers, hydraulic systems & dehumidifiers — engineered in Vasai since 1998.",
         },
         {
             image: "/assets/hero-01.png",
-            title: "Smart Industrial Solutions",
-            subtitle: "Built for Efficiency",
-            desc: "Delivering high-performance systems tailored for modern industries.",
+            altText: "Skilled technician working on hydraulic automation system manufactured by Sangawar Pneumatics, trusted by ISRO and BARC",
+            title: "50% Energy Savings.",
+            subtitle: "Patented Dehumidification Technology.",
+            desc: "Custom-engineered systems trusted by ISRO, BARC & NPCIL across India.",
         },
         {
             image: "/assets/hero-01.png",
-            title: "Innovation Meets Engineering",
-            subtitle: "Future Ready Systems",
-            desc: "Reliable, scalable, and energy-efficient engineering solutions.",
+            altText: "Sangawar Pneumatics engineer assembling custom industrial solution — 25 years of pneumatic and hydraulic engineering expertise",
+            title: "25 Years. 49+ Industries.",
+            subtitle: "Zero Compromise on Quality.",
+            desc: "compressed air dryers to hydraulic cylinders — built to your exact specification.",
         },
     ];
 
@@ -43,7 +46,7 @@ export default function Hero() {
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
                         <div className="slider">
-                            <img src={slide?.image} />
+                            <img src={slide?.image} alt={slide?.altText} />
                             <div className="slider_content container">
                                 
                                     <h2 className="hero_title">

@@ -42,7 +42,15 @@ export default function OurVision() {
             viewport={{ once: true }}
           >
             <p className="content_para">
-                 Our vision is to become a globally recognized and trusted leader in industrial engineering solutions, known for our commitment to innovation, quality, and sustainability. We aspire to set new benchmarks in pneumatic, hydraulic, and automation technologies by continuously evolving with industry advancements and developing cutting-edge, energy-efficient systems. By focusing on research, patented technologies, and customer-centric innovation, we aim to deliver solutions that drive industrial transformation and long-term value. We envision a future where our engineering excellence contributes to smarter, more efficient, and environmentally responsible industries, positioning Sangawar Pneumatics as a preferred partner for organizations seeking reliable and future-ready engineering solutions worldwide.
+                 Our vision is to be India's most trusted name in industrial engineering 
+— known not just for the systems we build, but for the problems we 
+solve and the value we create for every client we serve.
+
+We are working towards a future where patented, energy-efficient 
+engineering from Vasai powers industries across India and beyond — 
+from pharmaceutical cleanrooms and food processing plants to nuclear 
+facilities and defence systems. We believe that great engineering 
+should be accessible, accountable, and built to last.
             </p>
           </motion.div>
 
