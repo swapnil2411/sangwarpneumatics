@@ -68,7 +68,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="/products"
-                    className={pathname === "/products" ? "active" : ""}
+                    className={pathname === "/products" || pathname.startsWith("/products/") ? "active" : ""}
                     onClick={handleClose}
                   >
                     Products

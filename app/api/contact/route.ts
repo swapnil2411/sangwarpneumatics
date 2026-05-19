@@ -31,7 +31,7 @@ export async function POST(req: Request) {
 
     // ✅ Send email to admin
     await resend.emails.send({
-      from: "Sangawar Website <onboarding@resend.dev>",
+      from: "Sangawar Pneumatics <info@sangawar.in>",
       to: process.env.CLIENT_EMAIL || "",
       subject: "New Contact Form Lead",
       html: `
@@ -47,13 +47,26 @@ export async function POST(req: Request) {
 
     // ✅ Auto reply
     const autoReply = await resend.emails.send({
-  from: "Support <onboarding@resend.dev>",
+  from: "Sangawar Pneumatics <info@sangawar.in>",
   to: data.email,
   subject: "We received your inquiry",
   html: `
+  <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+    <h2>Thank You for Contacting Sangawar Pneumatics</h2>
+
     <p>Hi ${data.fullName},</p>
-    <p>Thank you for contacting Sangawar Pneumatics.</p>
-  `,
+
+    <p>
+      We have received your inquiry successfully.
+      Our team will get back to you shortly.
+    </p>
+
+    <p>
+      Regards,<br/>
+      Sangawar Pneumatics Team
+    </p>
+  </div>
+`,
 });
 
 console.log("AUTO REPLY RESULT:", autoReply);

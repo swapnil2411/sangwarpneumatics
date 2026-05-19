@@ -4,6 +4,7 @@ import OurMission from "./OurMission";
 import OurVision from "./OurVision";
 import FoundersSection from "./FoundersSection";
 import Testimonials from "./Testimonials";
+import AchievementsSection from "./AchievementsSection";
 import { Metadata } from "next";
 
 // ✅ Add this — Next.js reads this automatically
@@ -59,6 +60,7 @@ export default function About(){
             <OurMission />
             <OurVision />
             <FoundersSection />
+            <AchievementsSection />
             <Testimonials />
         </>
     )
