@@ -1,5 +1,7 @@
+
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import RecaptchaProvider from "@/lib/RecaptchaProvider";
 import "./globals.css";
 import "./styles/style.css";
 import "./styles/aboutus.css";
@@ -52,11 +54,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${roboto.className} h-full antialiased`}
       
     >
       
       <body className="min-h-full">
+        <RecaptchaProvider>
          <Toaster position="bottom-center" toastOptions={{
           duration: 5000,
          }} />
@@ -64,6 +68,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        </RecaptchaProvider>
         </body>
     </html>
   );

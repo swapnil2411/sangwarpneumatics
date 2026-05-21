@@ -77,6 +77,7 @@ import toast from "react-hot-toast";
 import Button from "@/components/common/Button";
 import PageLoader from "@/components/common/PageLoader";
 import { validateContactForm, ContactFormData, ContactFormErrors } from "@/lib/validations/formValidations";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 type SelectOption = {
   label: string;
@@ -84,6 +85,7 @@ type SelectOption = {
 };
 
 export default function ContactForm() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   // Loader
   const [loading, setLoading] = useState(false);
 
@@ -151,83 +153,179 @@ export default function ContactForm() {
   };
 
   // Submit Form
+  // const handleSubmit = async (
+  //   e: FormEvent<HTMLFormElement>
+  // ) => {
+  //   e.preventDefault();
+
+  //   // Frontend Validation
+  //   const validationErrors =
+  //     validateContactForm(form);
+
+  //   if (
+  //     Object.keys(validationErrors).length > 0
+  //   ) {
+  //     setErrors(validationErrors);
+
+  //     // toast.error(
+  //     //   "Please fill all required fields"
+  //     // );
+
+  //     return;
+  //   }
+
+  //   try {
+  //     setLoading(true);
+
+  //     const res = await fetch(
+  //       "/api/contact",
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type":
+  //             "application/json",
+  //         },
+  //         body: JSON.stringify(form),
+  //       }
+  //     );
+
+  //     const data = await res.json();
+
+  //     // API Error
+  //     if (!res.ok) {
+  //       setErrors(data.errors || {});
+
+  //       toast.error(
+  //         data.message ||
+  //           "Something went wrong"
+  //       );
+
+  //       return;
+  //     }
+
+  //     // Success
+  //     toast.success(
+  //       "Form submitted successfully"
+  //     );
+
+  //     // Reset Form
+  //     setForm({
+  //       fullName: "",
+  //       companyName: "",
+  //       email: "",
+  //       phone: "",
+  //       address: "",
+  //       product: "",
+  //       message: "",
+  //     });
+
+  //     setErrors({});
+  //   } catch (error) {
+  //     console.log(error);
+
+  //     toast.error(
+  //       "Network error. Please try again."
+  //     );
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const handleSubmit = async (
-    e: FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault();
+  e: FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
 
-    // Frontend Validation
-    const validationErrors =
-      validateContactForm(form);
+  // Validate first
+  const validationErrors =
+    validateContactForm(form);
 
-    if (
-      Object.keys(validationErrors).length > 0
-    ) {
-      setErrors(validationErrors);
+  if (
+    Object.keys(validationErrors).length > 0
+  ) {
+    setErrors(validationErrors);
+    return;
+  }
 
-      // toast.error(
-      //   "Please fill all required fields"
-      // );
+  try {
+    setLoading(true);
 
+    // IMPORTANT
+    // Generate token JUST before API call
+
+    if (!executeRecaptcha) {
+      toast.error(
+        "Recaptcha not ready"
+      );
       return;
     }
 
-    try {
-      setLoading(true);
-
-      const res = await fetch(
-        "/api/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type":
-              "application/json",
-          },
-          body: JSON.stringify(form),
-        }
+    const recaptchaToken =
+      await executeRecaptcha(
+        "contact_form"
       );
 
-      const data = await res.json();
 
-      // API Error
-      if (!res.ok) {
-        setErrors(data.errors || {});
-
-        toast.error(
-          data.message ||
-            "Something went wrong"
-        );
-
-        return;
-      }
-
-      // Success
-      toast.success(
-        "Form submitted successfully"
-      );
-
-      // Reset Form
-      setForm({
-        fullName: "",
-        companyName: "",
-        email: "",
-        phone: "",
-        address: "",
-        product: "",
-        message: "",
-      });
-
-      setErrors({});
-    } catch (error) {
-      console.log(error);
-
+    if (!recaptchaToken) {
       toast.error(
-        "Network error. Please try again."
+        "Failed to generate token"
       );
-    } finally {
-      setLoading(false);
+      return;
     }
-  };
+
+    // Send request immediately
+    const res = await fetch(
+      "/api/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type":
+            "application/json",
+        },
+        body: JSON.stringify({
+          ...form,
+          recaptchaToken,
+        }),
+      }
+    );
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      toast.error(
+        data.message ||
+          "Something went wrong"
+      );
+      return;
+    }
+
+    toast.success(
+      "Message sent successfully"
+    );
+
+    setForm({
+      fullName: "",
+      companyName: "",
+      email: "",
+      phone: "",
+      address: "",
+      product: "",
+      message: "",
+    });
+  } catch (error:any) {
+    console.log(
+    "FULL ERROR =>",
+    error
+  );
+
+    toast.error(
+      error?.message ||
+      "Submission failed"
+    );
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <>
@@ -346,6 +444,7 @@ export default function ContactForm() {
             </label>
 
             <Select<SelectOption>
+              instanceId="product-select"
               options={productOptions}
               placeholder="Select a Product"
               className="react_select_container"

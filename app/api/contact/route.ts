@@ -7,8 +7,80 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: Request) {
   try {
     const body = await req.json();
+    const { recaptchaToken } = body;
 
-    // ✅ Validate
+    console.log("BODY =>", body);
+console.log(
+  "TOKEN =>",
+  recaptchaToken
+);
+
+    // ==============================
+    // VERIFY RECAPTCHA
+    // ==============================
+
+
+const formData =
+  new URLSearchParams();
+
+formData.append(
+  "secret",
+  process.env
+    .RECAPTCHA_SECRET_KEY!
+);
+
+formData.append(
+  "response",
+  recaptchaToken.trim()
+);
+
+const captchaRes = await fetch(
+  "https://www.google.com/recaptcha/api/siteverify",
+  {
+    method: "POST",
+    body: formData,
+  }
+);
+
+const captchaData =
+  await captchaRes.json();
+
+console.log(
+  "CAPTCHA RESPONSE =>",
+  captchaData
+);
+
+// Spam Protection
+if (
+  !captchaData.success ||
+  captchaData.score < 0.5
+) {
+  return Response.json(
+    {
+      success: false,
+      message:
+        "Spam activity detected. Submission blocked.",
+    },
+    { status: 400 }
+  );
+}
+
+if (!captchaData.success) {
+  return Response.json(
+    {
+      success: false,
+      message:
+        "Captcha verification failed",
+    },
+    { status: 400 }
+  );
+}
+
+    // ==============================
+    // VALIDATE FORM
+    // ==============================
+
+
     const parsed = contactSchema.safeParse(body);
 
     if (!parsed.success) {
