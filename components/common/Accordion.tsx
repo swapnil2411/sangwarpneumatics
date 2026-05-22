@@ -72,7 +72,7 @@ const AccordionPanel: React.FC<PanelProps> = ({
         id={`accordion-trigger-${item.id}`}
         type="button"
       >
-        <img className="accordion-header-img" src={item?.icon} />
+        <img className="accordion-header-img" src={item?.icon} alt={item.title} />
         <span className="accordion-trigger-text">{item.title}</span>
         <span className="accordion-icon" aria-hidden="true">
           <svg
