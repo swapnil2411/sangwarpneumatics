@@ -33,6 +33,22 @@ export const metadata: Metadata = {
   description:
     "Trusted manufacturer of pneumatic, hydraulic & dehumidification systems in Vasai, Maharashtra. Serving ISRO, BARC & NPCIL since 1998.",
 
+    keywords: [
+    "Pneumatic systems",
+    "Industrial automation",
+    "Pneumatic cylinders",
+    "Pneumatic valves",
+    "Air preparation units",
+    "Automation solutions",
+    "Pneumatic products India",
+    "Sangawar Pneumatics",
+  ],
+  authors: [{ name: "Sangawar Pneumatics" }],
+
+  creator: "Sangawar Pneumatics",
+
+  publisher: "Sangawar Pneumatics",
+
   metadataBase: new URL("https://sangawar.in"),
 
   alternates: {
@@ -40,9 +56,29 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
+    title: "Sangawar Pneumatics",
+    description:
+      "Leading manufacturer and supplier of pneumatic systems and industrial automation products in India.",
+    url: "https://sangawar.in",
     siteName: "Sangawar Pneumatics",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sangawar Pneumatics",
+      },
+    ],
     locale: "en_IN",
     type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Sangawar Pneumatics",
+    description:
+      "Industrial automation and pneumatic solutions provider in India.",
+    images: ["/og-image.jpg"],
   },
 
   robots: {
