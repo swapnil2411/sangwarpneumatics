@@ -9,12 +9,6 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { recaptchaToken } = body;
 
-    console.log("BODY =>", body);
-console.log(
-  "TOKEN =>",
-  recaptchaToken
-);
-
     // ==============================
     // VERIFY RECAPTCHA
     // ==============================
@@ -45,10 +39,6 @@ const captchaRes = await fetch(
 const captchaData =
   await captchaRes.json();
 
-console.log(
-  "CAPTCHA RESPONSE =>",
-  captchaData
-);
 
 // Spam Protection
 if (
