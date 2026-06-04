@@ -6,25 +6,25 @@ export default function IndustryContent(){
     const industriesData = [
   {
     id: 1,
-    image: "/assets/pharma.png",
+    image: "/assets/pharma.webp",
     title: "PHARMACEUTICAL",
     description: "Advanced solutions for controlled environments and clean processes",
   },
   {
     id: 2,
-    image: "/assets/food-processing.png",
+    image: "/assets/food-processing.webp",
     title: "FOOD PROCESSING",
     description: "Efficient systems ensuring hygiene and moisture control",
   },
   {
     id: 3,
-    image: "/assets/manufacturing.png",
+    image: "/assets/manufacturing.webp",
     title: "MANUFACTURING",
     description: "Reliable engineering solutions for heavy-duty operations",
   },
   {
     id: 4,
-    image: "/assets/nuclear-defense.png",
+    image: "/assets/nuclear-defense.webp",
     title: "NUCLEAR & DEFENSE",
     description: "High-precision systems for critical and sensitive applications",
   },
