@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Cta(){
     return(
         <div className="cta_wrapper">
-            <img src="/assets/cta.png" alt="cta" />
+            <img src="/assets/cta.webp" alt="cta" />
             <div className="cta_content">
                 <h3 className="cta_heading">Need Industrial Solutions? Let’s Talk</h3>
                 <Link href="/contact">

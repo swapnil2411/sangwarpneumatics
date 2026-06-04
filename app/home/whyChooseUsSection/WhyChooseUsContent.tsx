@@ -93,7 +93,7 @@ export default function WhyChooseUsContent() {
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-        <img src="/assets/why_choose_us.png" alt="Why Choose Us" />
+        <img src="/assets/why_choose_us.webp" alt="Why Choose Us" />
       </motion.div>
 
     </div>
