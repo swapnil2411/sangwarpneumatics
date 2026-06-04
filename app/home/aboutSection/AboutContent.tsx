@@ -13,7 +13,7 @@ export default function AboutContent(){
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-                <img src="/assets/about-img.png" alt="About Us" />
+                <img src="/assets/about-img.webp" alt="About Us" />
             </motion.div>
             <motion.div
         className="right_about_area"

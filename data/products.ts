@@ -4,7 +4,7 @@
 //   {
 //     category: "Compressed Air Dryers",
 //     slug: "air-dryers",
-//     image: "/assets/air-dryers.png",
+//     image: "/assets/air-dryers.webp",
 //      description:
 //       "High-performance compressed air dryers designed to remove moisture and ensure reliable industrial operations.",
 
@@ -14,7 +14,7 @@
 //       {
 //         name: "Heatless Regenerative Type",
 //         description: "Delivers dry compressed air using PSA technology without external heating.",
-//         imgUrl: "/assets/heatless_generative_air_dryer.png",
+//         imgUrl: "/assets/heatless_generative_air_dryer.webp",
 //         features: [
 //           "Twin tower design",
 //           "No heater required",
@@ -29,7 +29,7 @@
 //       {
 //         name: "Heated Low Purge Type",
 //         description: "Energy-efficient dryer using external heater to reduce purge air loss.",
-//         imgUrl: "/assets/heated_low_purge.png",
+//         imgUrl: "/assets/heated_low_purge.webp",
 //         features: [
 //           "External heater regeneration",
 //           "Low purge air consumption",
@@ -44,7 +44,7 @@
 //       {
 //         name: "No Purge Loss Type",
 //         description: "Advanced dryer with zero compressed air loss using blower-based regeneration.",
-//         imgUrl: "/assets/no_loss_purge.png",
+//         imgUrl: "/assets/no_loss_purge.webp",
 //         features: [
 //           "Zero purge air loss",
 //           "Blower + heater system",
@@ -59,7 +59,7 @@
 //       {
 //         name: "Low Dew Point (-70°C)",
 //         description: "Ultra-dry air solution for critical applications requiring moisture-free air.",
-//         imgUrl: "/assets/low_dew_point.png",
+//         imgUrl: "/assets/low_dew_point.webp",
 //         features: [
 //           "-70°C dew point",
 //           "Molecular sieve desiccant",
@@ -74,7 +74,7 @@
 //       {
 //         name: "Refrigerated Type",
 //         description: "Removes moisture by cooling compressed air to safe dew point levels.",
-//         imgUrl: "/assets/refrigerated_type.png",
+//         imgUrl: "/assets/refrigerated_type.webp",
 //         features: [
 //           "Refrigeration system",
 //           "Auto drain system",
@@ -92,7 +92,7 @@
 //   {
 //     category: "Dehumidifiers",
 //     slug: "dehumidifiers",
-//     image: "/assets/dehumidifers.png",
+//     image: "/assets/dehumidifers.webp",
 //     description:
 //       "Industrial dehumidifiers for precise humidity control in critical environments.",
 
@@ -102,7 +102,7 @@
 //       {
 //         name: "Heatless Dehumidifier (Patented)",
 //         description: "Removes moisture without heating using advanced adsorption technology.",
-//         imgUrl: "/assets/heatless_dehumidifier.png",
+//         imgUrl: "/assets/heatless_dehumidifier.webp",
 //         features: [
 //           "Heatless operation",
 //           "Low energy consumption",
@@ -117,7 +117,7 @@
 //       {
 //         name: "Refrigerated Dehumidifier",
 //         description: "Controls humidity using cooling-based condensation method.",
-//         imgUrl: "/assets/refrigerated_dehumidifier.png",
+//         imgUrl: "/assets/refrigerated_dehumidifier.webp",
 //         features: [
 //           "Cooling coil system",
 //           "Automatic drainage",
@@ -132,7 +132,7 @@
 //       {
 //         name: "Low RH (15%) Dehumidifier",
 //         description: "Maintains extremely low humidity levels for critical environments.",
-//         imgUrl: "/assets/low_rh_dehumidifier.png",
+//         imgUrl: "/assets/low_rh_dehumidifier.webp",
 //         features: [
 //           "Low RH control (up to 15%)",
 //           "Precision humidity control",
@@ -150,7 +150,7 @@
 //   {
 //     category: "Hydraulic Systems",
 //     slug: "hydraulic-systems",
-//     image: "/assets/hydrulic-systems.png",
+//     image: "/assets/hydrulic-systems.webp",
 //     description:
 //       "Robust hydraulic solutions for lifting, actuation, and industrial automation.",
 
@@ -160,7 +160,7 @@
 //       {
 //         name: "Material Handling Systems",
 //         description: "Efficient hydraulic systems for lifting and transporting materials.",
-//         imgUrl: "/assets/material_handling_system.png",
+//         imgUrl: "/assets/material_handling_system.webp",
 //         features: [
 //           "Heavy-duty design",
 //           "Smooth operation",
@@ -175,7 +175,7 @@
 //       {
 //         name: "Hydraulic Scissor Lift",
 //         description: "Reliable lifting solution for vertical material movement.",
-//         imgUrl: "/assets/hydraulic_scissor_lift.png",
+//         imgUrl: "/assets/hydraulic_scissor_lift.webp",
 //         features: [
 //           "High load capacity",
 //           "Stable platform",
@@ -190,7 +190,7 @@
 //       {
 //         name: "Heavy Actuation Systems",
 //         description: "Hydraulic systems designed for heavy-duty industrial actuation.",
-//         imgUrl: "/assets/heavy_actuation_system.png",
+//         imgUrl: "/assets/heavy_actuation_system.webp",
 //         features: [
 //           "High force output",
 //           "Precision control",
@@ -208,7 +208,7 @@
 //   {
 //     category: "Filtration Systems",
 //     slug: "filtration-systems",
-//     image: "/assets/filteration-systems.png",
+//     image: "/assets/filteration-systems.webp",
 //     description:
 //       "Advanced filtration systems for clean air, gas, oil, and water processing.",
 
@@ -218,35 +218,35 @@
 //       {
 //         name: "Air Filtration",
 //         description: "Removes dust, oil mist, and contaminants from compressed air.",
-//         imgUrl: "/assets/air_filtration_system.png",
+//         imgUrl: "/assets/air_filtration_system.webp",
 //         features: ["Multi-stage filtration", "High efficiency", "Compact design"],
 //         advantages: ["Improves air quality", "Protects equipment", "Low maintenance"],
 //       },
 //       {
 //         name: "Gas Filtration",
 //         description: "Ensures clean and contaminant-free gas flow.",
-//         imgUrl: "/assets/gas_filtration_system.png",
+//         imgUrl: "/assets/gas_filtration_system.webp",
 //         features: ["High-pressure design", "Durable filters", "Leak-proof system"],
 //         advantages: ["Safe operations", "Improved efficiency", "Long filter life"],
 //       },
 //       {
 //         name: "Oil Filtration",
 //         description: "Removes impurities and sludge from industrial oil.",
-//         imgUrl: "/assets/oil_filtration_system.png",
+//         imgUrl: "/assets/oil_filtration_system.webp",
 //         features: ["Multi-stage filtration", "Vacuum dehydration", "Smart sensors"],
 //         advantages: ["Extends oil life", "Reduces downtime", "Improves performance"],
 //       },
 //       {
 //         name: "Water Filtration",
 //         description: "Purifies water for industrial and process use.",
-//         imgUrl: "/assets/water_filtration_system.png",
+//         imgUrl: "/assets/water_filtration_system.webp",
 //         features: ["Multi-layer filtration", "High flow capacity", "Durable design"],
 //         advantages: ["Clean water output", "Low maintenance", "Reliable system"],
 //       },
 //       {
 //         name: "Chemical Filtration",
 //         description: "Specialized filtration for handling aggressive chemicals.",
-//         imgUrl: "/assets/chemical_filtration_system.png",
+//         imgUrl: "/assets/chemical_filtration_system.webp",
 //         features: ["Corrosion-resistant design", "High efficiency", "Custom filters"],
 //         advantages: ["Safe handling", "Long lifespan", "Efficient filtration"],
 //       },
@@ -256,7 +256,7 @@
 //   {
 //     category: "Pressure Regulators",
 //     slug: "pressure-regulators",
-//     image: "/assets/pressure-regulators.png",
+//     image: "/assets/pressure-regulators.webp",
 //     description:
 //       "Precision pressure control solutions for gas and pneumatic systems.",
 
@@ -266,28 +266,28 @@
 //       {
 //         name: "Gas Regulators",
 //         description: "Controls and stabilizes gas pressure in systems.",
-//         imgUrl: "/assets/gas_reg.png",
+//         imgUrl: "/assets/gas_reg.webp",
 //         features: ["Precise control", "Durable body", "Safety valves"],
 //         advantages: ["Stable pressure", "Safe operation", "Long life"],
 //       },
 //       {
 //         name: "Low Pressure Regulators",
 //         description: "Designed for accurate control of low-pressure systems.",
-//         imgUrl: "/assets/low_pressure_reg.png",
+//         imgUrl: "/assets/low_pressure_reg.webp",
 //         features: ["High sensitivity", "Compact design", "Easy adjustment"],
 //         advantages: ["Accurate control", "Energy saving", "Reliable performance"],
 //       },
 //       {
 //         name: "High Pressure Regulators",
 //         description: "Handles high-pressure applications with precision.",
-//         imgUrl: "/assets/high_pressure_reg.png",
+//         imgUrl: "/assets/high_pressure_reg.webp",
 //         features: ["Heavy-duty design", "Pressure stability", "Robust build"],
 //         advantages: ["Safe operation", "High durability", "Consistent output"],
 //       },
 //       {
 //         name: "Single & Double Stage",
 //         description: "Flexible regulators for different pressure requirements.",
-//         imgUrl: "/assets/single_double_stage_reg.png",
+//         imgUrl: "/assets/single_double_stage_reg.webp",
 //         features: ["Single & dual stage", "Stable output", "Wide range"],
 //         advantages: ["Versatile usage", "Improved accuracy", "Better control"],
 //       },
@@ -297,7 +297,7 @@
 //   {
 //     category: "Crane & Accessories",
 //     slug: "crane-accessories",
-//     image: "/assets/crane-accessories.png",
+//     image: "/assets/crane-accessories.webp",
 //     description:
 //       "Reliable crane attachments and accessories for efficient material handling.",
 
@@ -307,21 +307,21 @@
 //       {
 //         name: "Grab Bucket",
 //         description: "Used for handling bulk materials efficiently.",
-//         imgUrl: "/assets/heatless_generative_air_dryer.png",
+//         imgUrl: "/assets/heatless_generative_air_dryer.webp",
 //         features: ["Heavy-duty design", "High capacity", "Strong grip"],
 //         advantages: ["Fast material handling", "Durable", "Efficient"],
 //       },
 //       {
 //         name: "Clamping Unit",
 //         description: "Provides secure gripping for industrial operations.",
-//         imgUrl: "/assets/heatless_generative_air_dryer.png",
+//         imgUrl: "/assets/heatless_generative_air_dryer.webp",
 //         features: ["Strong clamping force", "Precision control", "Robust design"],
 //         advantages: ["Safe handling", "Reliable operation", "Long life"],
 //       },
 //       {
 //         name: "Testing Accessories",
 //         description: "Accessories for testing and inspection applications.",
-//         imgUrl: "/assets/heatless_generative_air_dryer.png",
+//         imgUrl: "/assets/heatless_generative_air_dryer.webp",
 //         features: ["Accurate measurement", "Durable build", "Easy to use"],
 //         advantages: ["Improves accuracy", "Reliable results", "Low maintenance"],
 //       },
@@ -335,7 +335,7 @@ export const productCategories = [
   {
     category: "Compressed Air Dryers",
     slug: "air-dryers",
-    image: "/assets/air-dryers.png",
+    image: "/assets/air-dryers.webp",
     description:
       "Industrial compressed air dryers manufactured in India — removing moisture to protect equipment, improve air quality, and ensure reliable operations across all industries.",
 
@@ -347,7 +347,7 @@ export const productCategories = [
         name: "Heatless Regenerative Air Dryer",
         description:
           "Delivers consistently dry compressed air using Pressure Swing Adsorption (PSA) technology — no external heating required, minimal moving parts, and automatic tower switching for uninterrupted operation.",
-        imgUrl: "/assets/heatless_generative_air_dryer.png",
+        imgUrl: "/assets/heatless_generative_air_dryer.webp",
         features: [
           "Twin tower PSA design for continuous drying",
           "Automatic tower switching with PLC control",
@@ -363,7 +363,7 @@ export const productCategories = [
         name: "Heated Low Purge Air Dryer",
         description:
           "Energy-efficient compressed air dryer that uses an external heater during regeneration to significantly reduce purge air consumption — ideal for large-capacity installations where operating cost matters.",
-        imgUrl: "/assets/heated_low_purge.png",
+        imgUrl: "/assets/heated_low_purge.webp",
         features: [
           "External heater regeneration reduces purge air by up to 40%",
           "PLC-based automatic control with fault indication",
@@ -379,7 +379,7 @@ export const productCategories = [
         name: "No Purge Loss Air Dryer",
         description:
           "Advanced blower-regenerated compressed air dryer that achieves zero purge air loss — the highest efficiency drying solution available for industries where every cubic metre of compressed air has a cost.",
-        imgUrl: "/assets/no_loss_purge.png",
+        imgUrl: "/assets/no_loss_purge.webp",
         features: [
           "Zero compressed air purge loss during regeneration",
           "Blower and heater combined regeneration system",
@@ -395,7 +395,7 @@ export const productCategories = [
         name: "Low Dew Point Air Dryer (-70°C)",
         description:
           "Ultra-dry compressed air dryer achieving dew points as low as -70°C — engineered for critical applications in pharmaceuticals, electronics, defence, and laboratory environments where any trace of moisture is unacceptable.",
-        imgUrl: "/assets/low_dew_point.png",
+        imgUrl: "/assets/low_dew_point.webp",
         features: [
           "Dew point down to -70°C for extreme dryness",
           "Molecular sieve desiccant for superior moisture adsorption",
@@ -411,7 +411,7 @@ export const productCategories = [
         name: "Refrigerated Compressed Air Dryer",
         description:
           "Cost-effective compressed air dryer that removes bulk moisture by cooling air to a safe dew point — the most widely used dryer for general industrial applications where a pressure dew point of +3°C to +10°C is acceptable.",
-        imgUrl: "/assets/refrigerated_type.png",
+        imgUrl: "/assets/refrigerated_type.webp",
         features: [
           "Refrigeration-based air cooling and moisture separation",
           "Automatic electronic drain for continuous condensate removal",
@@ -429,7 +429,7 @@ export const productCategories = [
   {
     category: "Industrial Dehumidifiers",
     slug: "dehumidifiers",
-    image: "/assets/dehumidifers.png",
+    image: "/assets/dehumidifers.webp",
     description:
       "Patented industrial dehumidifiers manufactured by Sangawar Pneumatics — delivering precise humidity control with up to 50% energy savings for pharmaceutical, food, and manufacturing environments.",
 
@@ -441,7 +441,7 @@ export const productCategories = [
         name: "Heatless Dehumidifier (Patented Technology)",
         description:
           "India's most energy-efficient industrial dehumidifier — using patented heatless adsorption technology to remove moisture from large industrial spaces without the energy penalty of conventional heating-based systems. Delivers over 50% energy savings in operation.",
-        imgUrl: "/assets/heatless_dehumidifier.png",
+        imgUrl: "/assets/heatless_dehumidifier.webp",
         features: [
           "Patented heatless operation — World Patent application filed",
           "Over 50% energy saving compared to conventional dehumidifiers",
@@ -457,7 +457,7 @@ export const productCategories = [
         name: "Refrigerated Industrial Dehumidifier",
         description:
           "Robust industrial dehumidifier using cooling-based condensation to remove moisture from large spaces — designed and sized to your specific capacity and application requirements.",
-        imgUrl: "/assets/refrigerated_dehumidifier.png",
+        imgUrl: "/assets/refrigerated_dehumidifier.webp",
         features: [
           "Cooling coil condensation system for high-volume moisture removal",
           "Automatic drainage — no manual intervention required",
@@ -473,7 +473,7 @@ export const productCategories = [
         name: "Low RH (15%) Dehumidifier",
         description:
           "High-performance dehumidifier engineered to maintain extremely low relative humidity levels down to 15% RH — essential for pharmaceutical dry rooms, battery manufacturing, electronics assembly, and precision instrumentation storage.",
-        imgUrl: "/assets/low_rh_dehumidifier.png",
+        imgUrl: "/assets/low_rh_dehumidifier.webp",
         features: [
           "Maintains relative humidity as low as 15% RH",
           "Precision humidity sensor and automatic control system",
@@ -491,7 +491,7 @@ export const productCategories = [
   {
     category: "Hydraulic Systems",
     slug: "hydraulic-systems",
-    image: "/assets/hydrulic-systems.png",
+    image: "/assets/hydrulic-systems.webp",
     description:
       "Custom hydraulic systems, cylinders, and power packs manufactured by Sangawar Pneumatics — designed for heavy lifting, precision actuation, and industrial material handling across India.",
 
@@ -503,7 +503,7 @@ export const productCategories = [
         name: "Hydraulic Material Handling Systems",
         description:
           "Custom-engineered hydraulic systems for moving, lifting, and positioning heavy materials in manufacturing plants, warehouses, and industrial facilities — designed for high cycle rates and long-term reliability.",
-        imgUrl: "/assets/material_handling_system.png",
+        imgUrl: "/assets/material_handling_system.webp",
         features: [
           "Heavy-duty hydraulic circuit design for high load capacity",
           "Smooth, controlled material movement with adjustable speed",
@@ -519,7 +519,7 @@ export const productCategories = [
         name: "Hydraulic Scissor Lift",
         description:
           "Industrial hydraulic scissor lift for safe, stable vertical material and personnel lifting — manufactured to custom platform size, height, and load capacity requirements.",
-        imgUrl: "/assets/hydraulic_scissor_lift.png",
+        imgUrl: "/assets/hydraulic_scissor_lift.webp",
         features: [
           "High load capacity with stable scissor mechanism",
           "Smooth, controlled hydraulic lifting and lowering",
@@ -535,7 +535,7 @@ export const productCategories = [
         name: "Heavy Actuation Hydraulic Systems",
         description:
           "High-force hydraulic actuation systems for heavy industrial applications — including valve actuation, press operations, positioning systems, and defence-grade applications such as the decoy launching system delivered to the Indian Navy.",
-        imgUrl: "/assets/heavy_actuation_system.png",
+        imgUrl: "/assets/heavy_actuation_system.webp",
         features: [
           "High force output with precision position and speed control",
           "Robust construction for continuous heavy-duty operation",
@@ -553,7 +553,7 @@ export const productCategories = [
   {
     category: "Industrial Filtration Systems",
     slug: "filtration-systems",
-    image: "/assets/filteration-systems.png",
+    image: "/assets/filteration-systems.webp",
     description:
       "Complete industrial filtration systems for air, gas, oil, water, and chemicals — manufactured by Sangawar Pneumatics for clean, safe, and efficient industrial operations.",
 
@@ -565,7 +565,7 @@ export const productCategories = [
         name: "Compressed Air Filtration",
         description:
           "Multi-stage compressed air filtration systems removing dust, oil mist, water droplets, and sub-micron particles — protecting downstream pneumatic equipment, processes, and end products.",
-        imgUrl: "/assets/air_filtration_system.png",
+        imgUrl: "/assets/air_filtration_system.webp",
         features: [
           "Multi-stage coalescing and particulate filtration",
           "High-efficiency element ratings from 40 micron to 0.01 micron",
@@ -581,7 +581,7 @@ export const productCategories = [
         name: "Industrial Gas Filtration",
         description:
           "High-pressure gas filtration systems for nitrogen, oxygen, argon, CO₂, hydrogen, chlorine, and calibration gases — designed to remove particulates and moisture while maintaining gas purity.",
-        imgUrl: "/assets/gas_filtration_system.png",
+        imgUrl: "/assets/gas_filtration_system.webp",
         features: [
           "High-pressure rated construction up to 350 Bar",
           "Corrosion-resistant MOC options — SS 304, SS 316, and special alloys",
@@ -597,7 +597,7 @@ export const productCategories = [
         name: "Hydraulic & Transformer Oil Filtration",
         description:
           "Mobile oil filtration trolleys and inline systems for hydraulic power packs, storage tanks, and transformer oil — including vacuum-based moisture removal and ionic impurity reduction.",
-        imgUrl: "/assets/oil_filtration_system.png",
+        imgUrl: "/assets/oil_filtration_system.webp",
         features: [
           "Multi-stage particulate filtration down to 3 micron",
           "Vacuum dehydration technology for moisture removal",
@@ -613,7 +613,7 @@ export const productCategories = [
         name: "Industrial Water Filtration & Purification",
         description:
           "Complete water treatment systems for industrial, pharmaceutical, hotel, marine, and municipal applications — including RO systems, UV purifiers, water softeners, and river water treatment.",
-        imgUrl: "/assets/water_filtration_system.png",
+        imgUrl: "/assets/water_filtration_system.webp",
         features: [
           "Multi-layer sand, activated carbon, and UV filtration",
           "RO systems for pharmaceutical-grade water purification",
@@ -629,7 +629,7 @@ export const productCategories = [
         name: "Chemical & Acid Filtration",
         description:
           "Corrosion-resistant filtration systems for aggressive chemicals, acids, alkalis, and solvents — available in Y-type, basket, simplex, duplex, cartridge, and multi-layer configurations.",
-        imgUrl: "/assets/chemical_filtration_system.png",
+        imgUrl: "/assets/chemical_filtration_system.webp",
         features: [
           "Corrosion-resistant MOC — PP, PVDF, SS 316L, Hastelloy",
           "Custom filter ratings, housing size, and connection type",
@@ -647,7 +647,7 @@ export const productCategories = [
   {
     category: "Pressure Regulators",
     slug: "pressure-regulators",
-    image: "/assets/pressure-regulators.png",
+    image: "/assets/pressure-regulators.webp",
     description:
       "Precision pressure regulators for industrial gases, compressed air, and pneumatic systems — manufactured in SS 304, SS 316, and brass for single and double stage applications.",
 
@@ -659,7 +659,7 @@ export const productCategories = [
         name: "Industrial Gas Pressure Regulators",
         description:
           "Precision regulators for nitrogen, oxygen, argon, hydrogen, ammonia, chlorine, CO₂, and all calibration gases — maintaining consistent outlet pressure regardless of cylinder or supply pressure variation.",
-        imgUrl: "/assets/gas_reg.png",
+        imgUrl: "/assets/gas_reg.webp",
         features: [
           "Compatible with nitrogen, oxygen, hydrogen, ammonia, and calibration gases",
           "Durable diaphragm and seat design for long-term stability",
@@ -675,7 +675,7 @@ export const productCategories = [
         name: "Low Pressure Regulators",
         description:
           "High-sensitivity regulators for precise control of low-pressure gas and air systems — ideal for laboratory instruments, analytical equipment, and sensitive process applications.",
-        imgUrl: "/assets/low_pressure_reg.png",
+        imgUrl: "/assets/low_pressure_reg.webp",
         features: [
           "High-sensitivity diaphragm for accurate low-pressure control",
           "Compact, lightweight design for panel or inline mounting",
@@ -691,7 +691,7 @@ export const productCategories = [
         name: "High Pressure Regulators",
         description:
           "Heavy-duty regulators for high-pressure compressed gas cylinders, pipelines, and industrial systems — maintaining stable outlet pressure from inlet pressures up to 350 Bar.",
-        imgUrl: "/assets/high_pressure_reg.png",
+        imgUrl: "/assets/high_pressure_reg.webp",
         features: [
           "Heavy-duty body rated for high inlet pressures up to 350 Bar",
           "Precision pressure stability under variable demand",
@@ -707,7 +707,7 @@ export const productCategories = [
         name: "Single & Double Stage Regulators",
         description:
           "Flexible regulator configurations for applications requiring either simple single-stage pressure reduction or two-stage precision control — available across a wide pressure and flow range.",
-        imgUrl: "/assets/single_double_stage_reg.png",
+        imgUrl: "/assets/single_double_stage_reg.webp",
         features: [
           "Single stage for general industrial and laboratory use",
           "Double stage for precise, stable pressure with varying inlet",
@@ -725,7 +725,7 @@ export const productCategories = [
   {
     category: "Crane & Lifting Accessories",
     slug: "crane-accessories",
-    image: "/assets/crane-accessories.png",
+    image: "/assets/crane-accessories.webp",
     description:
       "Heavy-duty crane accessories and lifting attachments manufactured by Sangawar Pneumatics — grab buckets, clamping units, and load testing accessories for safe industrial material handling.",
 
@@ -737,7 +737,7 @@ export const productCategories = [
         name: "Grab Bucket",
         description:
           "Heavy-duty hydraulic or mechanical grab buckets for handling bulk materials including coal, scrap, aggregate, sand, and granular materials — custom-designed for your crane capacity and material type.",
-        imgUrl: "/assets/grab_bucket.png",
+        imgUrl: "/assets/grab_bucket.webp",
         features: [
           "Heavy-duty fabricated steel construction for long service life",
           "High capacity design matched to your crane's safe working load",
@@ -753,7 +753,7 @@ export const productCategories = [
         name: "Clamping Unit",
         description:
           "Precision hydraulic and mechanical clamping units for secure gripping of structural sections, pipes, plates, and irregular industrial loads during crane lifting operations.",
-        imgUrl: "/assets/clamping_unit.png",
+        imgUrl: "/assets/clamping_unit.webp",
         features: [
           "High clamping force with secure, slip-resistant grip",
           "Precision hydraulic control for safe load engagement and release",
@@ -769,7 +769,7 @@ export const productCategories = [
         name: "Load Testing Accessories",
         description:
           "BIS and international standard compliant load testing devices and accessories for single girder cranes, overhead cranes, and lifting equipment — including dynamic load testing devices supplied to NPCIL.",
-        imgUrl: "/assets/load_testing.png",
+        imgUrl: "/assets/load_testing.webp",
         features: [
           "Designed to BIS, EN, and international crane testing standards",
           "Dynamic and static load testing capability",
