@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Button from "@/components/common/Button";
+import Link from "next/link";
 
 export default function AboutContent(){
     return(
@@ -27,9 +28,11 @@ Hydraulic & Dehumidification Systems</h1>
                     Sangawar Pneumatics is an engineering-driven company specializing in pneumatic, hydraulic, and automation systems. With patented technologies and a strong focus on energy efficiency, we deliver reliable, high-performance solutions tailored to industrial needs, ensuring quality, innovation, and customer satisfaction.<br />
                     Operating from our well-equipped facility in Vasai, we combine modern fabrication capabilities with engineering precision to deliver reliable and customized solutions. Our commitment is simple — to provide value-driven, high-quality systems that ensure complete customer satisfaction across every project we undertake.
                 </p>
+               <Link href="/about">
                 <Button btnVariant="fill_btn">
                     About  Us
                 </Button>
+               </Link>
             </motion.div>
         </div>
     )

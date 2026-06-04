@@ -61,7 +61,7 @@ export default function About(){
             <OurVision />
             <FoundersSection />
             <AchievementsSection />
-            <Testimonials />
+            {/* <Testimonials /> */}
         </>
     )
 }

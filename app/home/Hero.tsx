@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Link from "next/link";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,21 +12,21 @@ import Button from "@/components/common/Button";
 export default function Hero() {
     const slides = [
         {
-            image: "/assets/hero-01.png",
+            image: "/assets/hero-01.webp",
             altText: "Industrial engineer operating pneumatic equipment at Sangawar Pneumatics manufacturing facility in Vasai, Maharashtra",
             title: "India's Trusted Manufacturer.",
             subtitle: "Pneumatics. Hydraulics. Results.",
             desc: "Compressed air dryers, hydraulic systems & dehumidifiers — engineered in Vasai since 1998.",
         },
         {
-            image: "/assets/hero-01.png",
+            image: "/assets/hero-02.webp",
             altText: "Skilled technician working on hydraulic automation system manufactured by Sangawar Pneumatics, trusted by ISRO and BARC",
             title: "50% Energy Savings.",
             subtitle: "Patented Dehumidification Technology.",
             desc: "Custom-engineered systems trusted by ISRO, BARC & NPCIL across India.",
         },
         {
-            image: "/assets/hero-01.png",
+            image: "/assets/hero-03.webp",
             altText: "Sangawar Pneumatics engineer assembling custom industrial solution — 25 years of pneumatic and hydraulic engineering expertise",
             title: "25 Years. 49+ Industries.",
             subtitle: "Zero Compromise on Quality.",
@@ -57,9 +58,11 @@ export default function Hero() {
                                     {/* <button className="hero_btn">
                                         Get a Quote
                                     </button> */}
-                                    <Button btnVariant="fill_btn hero_btn">
-                                        Get a Quote
-                                    </Button>
+                                    <Link href="/contact">
+                                        <Button btnVariant="fill_btn">
+                                            Get a Quote
+                                        </Button>
+                                    </Link>
                             </div>
                         </div>
 
