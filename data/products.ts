@@ -769,7 +769,7 @@ export const productCategories = [
         name: "Load Testing Accessories",
         description:
           "BIS and international standard compliant load testing devices and accessories for single girder cranes, overhead cranes, and lifting equipment — including dynamic load testing devices supplied to NPCIL.",
-        imgUrl: "/assets/load_testing.webp",
+        imgUrl: "/assets/testing_accessories.webp",
         features: [
           "Designed to BIS, EN, and international crane testing standards",
           "Dynamic and static load testing capability",
