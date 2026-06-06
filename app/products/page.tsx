@@ -4,6 +4,7 @@ import SectionHeading from "@/components/common/SectionHeading";
 import PageBanner from "@/components/common/PageBanner";
 import ProductContent from "./productsContent";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Industrial Hydraulic & Pneumatic Products | Sangawar Pneumatics",
@@ -89,9 +90,63 @@ export const metadata: Metadata = {
   },
 };
 
+
+const productsSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+
+  name: "Industrial Hydraulic & Pneumatic Products",
+
+  description:
+    "Industrial air dryers, dehumidifiers, hydraulic systems, filtration systems, pressure regulators and crane accessories.",
+
+  url: "https://sangawar.in/products",
+
+  hasPart: [
+    {
+      "@type": "WebPage",
+      name: "Air Dryers",
+      url: "https://sangawar.in/products/air-dryers",
+    },
+    {
+      "@type": "WebPage",
+      name: "Dehumidifiers",
+      url: "https://sangawar.in/products/dehumidifiers",
+    },
+    {
+      "@type": "WebPage",
+      name: "Hydraulic Systems",
+      url: "https://sangawar.in/products/hydraulic-systems",
+    },
+    {
+      "@type": "WebPage",
+      name: "Filtration Systems",
+      url: "https://sangawar.in/products/filtration-systems",
+    },
+    {
+      "@type": "WebPage",
+      name: "Pressure Regulators",
+      url: "https://sangawar.in/products/pressure-regulators",
+    },
+    {
+      "@type": "WebPage",
+      name: "Crane Accessories",
+      url: "https://sangawar.in/products/crane-accessories",
+    },
+  ],
+};
+
 export default function ProductsPage() {
+  
   return (
     <>
+    <Script
+        id="products-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productsSchema),
+        }}
+      />
       <PageBanner title="Products" />
 
       <ProductContent />

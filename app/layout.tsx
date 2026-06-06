@@ -34,15 +34,22 @@ export const metadata: Metadata = {
     "Trusted manufacturer of pneumatic, hydraulic & dehumidification systems in Vasai, Maharashtra. Serving ISRO, BARC & NPCIL since 1998.",
 
     keywords: [
-    "Pneumatic systems",
-    "Industrial automation",
-    "Pneumatic cylinders",
-    "Pneumatic valves",
-    "Air preparation units",
-    "Automation solutions",
-    "Pneumatic products India",
-    "Sangawar Pneumatics",
-  ],
+  "Sangawar Pneumatics",
+  "Pneumatic Systems",
+  "Hydraulic Systems",
+  "Industrial Air Dryers",
+  "Industrial Dehumidifiers",
+  "Industrial Filtration Systems",
+  "Pressure Regulators",
+  "Hydraulic Material Handling Systems",
+  "Crane Accessories",
+  "Industrial Automation Solutions",
+  "Hydraulics and Pneumatics",
+  "Air Dryer for Compressor",
+  "Industrial Engineering Solutions",
+  "Industrial Equipment Manufacturer India",
+  "Vasai Industrial Automation",
+],
   authors: [{ name: "Sangawar Pneumatics" }],
 
   creator: "Sangawar Pneumatics",
@@ -103,7 +110,7 @@ const organizationSchema = {
   address: {
     "@type": "PostalAddress",
     streetAddress:
-      "Unit No. 27, Durga Industrial Estate, Parmar Techno Centre, Phase I, Pelhar",
+      "Unit No 26/27, Phase -1, Parmal Technocenter Village, Vasai East, Palghar",
     addressLocality: "Vasai",
     addressRegion: "Maharashtra",
     postalCode: "401208",
@@ -112,6 +119,55 @@ const organizationSchema = {
   sameAs: [
     "https://www.linkedin.com/company/sangawar-pneumatics",
   ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Sangawar Pneumatics",
+  url: "https://sangawar.in",
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+
+  name: "Sangawar Pneumatics",
+
+  image:
+    "https://sangawar.in/assets/sangawar-logo.png",
+
+  url: "https://sangawar.in",
+
+  telephone: "+91 9323521603", // Primary Number
+
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+91 9323521603",
+      contactType: "sales",
+      areaServed: "IN",
+      availableLanguage: ["English", "Hindi"],
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+91 7021996181",
+      contactType: "customer service",
+      areaServed: "IN",
+      availableLanguage: ["English", "Hindi"],
+    },
+  ],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress:
+      "Unit No 26/27, Phase -1, Parmal Technocenter Village",
+    addressLocality: "Vasai",
+    addressRegion: "Maharashtra",
+    postalCode: "401208",
+    addressCountry: "IN",
+  },
+
+  areaServed: "India",
 };
 
 export default function RootLayout({
@@ -136,6 +192,17 @@ export default function RootLayout({
           }}
         />
 
+        <Script
+  id="website-schema"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(websiteSchema),
+  }}
+/>
+
+
+
         <RecaptchaProvider>
           <Toaster
             position="bottom-center"
@@ -146,7 +213,9 @@ export default function RootLayout({
 
           <RouteLoader />
           <Navbar />
-          {children}
+          <main id="main-content">
+  {children}
+</main>
           <Footer />
         </RecaptchaProvider>
       </body>

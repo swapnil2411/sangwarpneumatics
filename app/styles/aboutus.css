@@ -191,6 +191,11 @@
   line-height: 1;
 }
 
+.ach_card_icon svg{
+   width: 55px;
+   height: 55px;
+}
+
 .ach_card_badge {
   display: inline-block;
   font-size: 0.7rem;
@@ -201,6 +206,7 @@
   border-radius: 20px;
   width: fit-content;
   letter-spacing: 0.3px;
+  margin: 10px 0;
 }
 
 .ach_card_heading {
