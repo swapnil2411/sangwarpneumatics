@@ -11,6 +11,7 @@ import "./styles/aboutus.css";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import RouteLoader from "@/components/common/RouteLoader";
+import SmoothScroll from "@/components/common/SmoothScroll";
 
 import { Toaster } from "react-hot-toast";
 
@@ -204,6 +205,7 @@ export default function RootLayout({
 
 
         <RecaptchaProvider>
+          <SmoothScroll />
           <Toaster
             position="bottom-center"
             toastOptions={{
