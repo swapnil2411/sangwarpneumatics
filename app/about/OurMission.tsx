@@ -6,7 +6,7 @@
 //                         <SectionHeading title="Mission" subtitle="Our Mission" />
 //                         <div className="sec_pad about_us_area mission_area">
 //                             <div className="img_area">
-//                                 <img src="/assets/our_mission.png" alt="about intro" />
+//                                 <img src="/assets/our_mission.webp" alt="about intro" />
 //                             </div>
 //                             <div className="content_area">
 //                                 <p className="content_para">
@@ -41,7 +41,7 @@ export default function OurMission() {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <img src="/assets/our_mission.png" />
+            <img src="/assets/our_mission.webp" />
           </motion.div>
 
           {/* TEXT */}

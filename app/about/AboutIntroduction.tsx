@@ -86,7 +86,7 @@ installed by our own team. No outsourcing. No compromise.
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <img src="/assets/about_intro.png" alt="about intro" />
+            <img src="/assets/about_intro.webp" alt="about intro" />
           </motion.div>
 
         </div>

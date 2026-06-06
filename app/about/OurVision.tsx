@@ -12,7 +12,7 @@
 //                                 </p>
 //                             </div>
 //                             <div className="img_area">
-//                                 <img src="/assets/our_vision.png" alt="about intro" />
+//                                 <img src="/assets/our_vision.webp" alt="about intro" />
 //                             </div>
 //                         </div>
 //                     </div>
@@ -62,7 +62,7 @@ should be accessible, accountable, and built to last.
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <img src="/assets/our_vision.png" />
+            <img src="/assets/our_vision.webp" />
           </motion.div>
 
         </div>

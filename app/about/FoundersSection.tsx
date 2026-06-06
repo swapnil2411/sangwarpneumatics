@@ -6,7 +6,7 @@
 //                 <SectionHeading title="Founder" subtitle="Founder" />
 //                 <div className="sec_pad about_us_area mission_area">
 //                     <div className="img_area">
-//                         <img src="/assets/founder.png" alt="Founder" />
+//                         <img src="/assets/founder.webp" alt="Founder" />
 //                     </div>
 //                     <div className="content_area">
 //                         <p className="content_para">
@@ -46,7 +46,7 @@ export default function FoundersSection() {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <img src="/assets/founder.png" alt="Mr. Pramod Sangawar — Founder of Sangawar Pneumatics, 
+            <img src="/assets/founder.webp" alt="Mr. Pramod Sangawar — Founder of Sangawar Pneumatics, 
 B.E. Mechanical & Electrical engineer, Vasai Maharashtra" />
           </motion.div>
 
