@@ -12,8 +12,10 @@ import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import RouteLoader from "@/components/common/RouteLoader";
 import SmoothScroll from "@/components/common/SmoothScroll";
+import { headers } from "next/headers";
 
 import { Toaster } from "react-hot-toast";
+import path from "path";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -171,11 +173,20 @@ const localBusinessSchema = {
   areaServed: "India",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+   const pathname =
+    (await headers()).get("x-current-path") || "/";
+
+  console.log("Current Path:", pathname);
+
+
+  const isAdmin =
+    pathname.includes("admin");
   return (
     <html
       lang="en"
@@ -214,11 +225,11 @@ export default function RootLayout({
           />
 
           <RouteLoader />
-          <Navbar />
+          {!isAdmin && <Navbar />}
           <main id="main-content">
   {children}
 </main>
-          <Footer />
+          {!isAdmin && <Footer />}
         </RecaptchaProvider>
       </body>
     </html>

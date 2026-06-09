@@ -1,0 +1,401 @@
+/* === RESET === */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #f0f2f7;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1a1d2e;
+}
+
+/* === ADMIN LAYOUT === */
+.admin-layout { display: flex; min-height: 100vh; }
+.admin-main { flex: 1; margin-left: 200px; }
+.admin-content { padding: 20px; }
+
+.admin_btn{
+    color: #fff;
+    cursor: pointer;
+    background: #0952ba;
+    /* border: 1px solid #fff; */
+    border-radius: 5px;
+    width: 120px;
+    padding: 8px 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  position: fixed;
+  left: 0; top: 0;
+  width: 200px;
+  height: 100vh;
+  background: #0952ba;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 22px 18px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.sidebar-header h2::after {
+  content: 'Content Dashboard';
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: rgba(255,255,255,.3);
+  margin-top: 2px;
+}
+
+.sidebar nav {
+  padding: 14px 10px;
+  flex: 1;
+}
+
+.sidebar ul { list-style: none; }
+.sidebar li { margin-bottom: 2px; }
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 10px;
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.sidebar a:hover {
+  color: white;
+  background: rgba(255,255,255,.06);
+}
+
+.sidebar a.active,
+.sidebar a[aria-current="page"] {
+  color: white;
+  background: linear-gradient(90deg, #3b63f7, #2d52d4);
+  box-shadow: 0 2px 12px rgba(59,99,247,.3);
+}
+
+.close-btn { display: none; }
+
+/* === TOPBAR === */
+.topbar {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #eaeef5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.logout-btn {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.logout-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+/* === PAGE HEADER === */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1d2e;
+}
+
+.add-btn {
+  background: #3b63f7;
+  color: white;
+  padding: 9px 16px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.15s;
+  border: none;
+  cursor: pointer;
+}
+
+.add-btn:hover { background: #2d52d4; }
+
+/* === DASHBOARD GRID === */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 22px;
+  border: 1px solid #eaeef5;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 4px 20px rgba(59,99,247,.08);
+  transform: translateY(-1px);
+}
+
+.dashboard-card h3 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.dashboard-card span {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1d2e;
+  line-height: 1;
+}
+
+/* === BLOG TABLE === */
+.table-wrapper {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #eaeef5;
+  overflow: hidden;
+}
+
+.blog-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.blog-table th {
+  padding: 12px 16px;
+  background: #f8faff;
+  border-bottom: 1px solid #eaeef5;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+}
+
+.blog-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  color: #374151;
+}
+
+.blog-table tr:last-child td { border-bottom: none; }
+.blog-table tr:hover td { background: #fafcff; }
+
+.blog-table img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eaeef5;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 500;
+}
+
+.status-published { background: #f0fdf4; color: #15803d; }
+.status-draft { background: #f0f0ff; color: #6366f1; border: 1px solid #e0e7ff; }
+
+.action-buttons{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.edit-btn {
+  background: #eff4ff;
+  color: #3b63f7;
+  padding: 6px 12px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: background 0.15s;
+  margin-right: 6px;
+}
+
+.edit-btn:hover { background: #dce6ff; }
+
+.delete-btn {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 6px 12px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.delete-btn:hover { background: #fee2e2; }
+
+/* === BLOG FORM === */
+.blog-form {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid #eaeef5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+}
+
+.blog-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 7px;
+}
+
+.blog-form input,
+.blog-form textarea,
+.blog-form select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  outline: none;
+  font-size: 14px;
+  color: #1a1d2e;
+  background: #fafbff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.blog-form input:focus,
+.blog-form textarea:focus,
+.blog-form select:focus {
+  border-color: #3b63f7;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59,99,247,.1);
+}
+
+.blog-form textarea {
+  resize: vertical;
+  min-height: 130px;
+  line-height: 1.6;
+}
+
+.blog-form button[type="submit"] {
+  background: #3b63f7;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  align-self: flex-start;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.blog-form button[type="submit"]:hover { background: #2d52d4; }
+.blog-form button[type="submit"]:active { transform: scale(0.98); }
+.blog-form button[type="submit"]:disabled { opacity: 0.65; cursor: not-allowed; }
+
+/* === IMAGE PREVIEW === */
+.preview-image {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #eaeef5;
+  margin-top: 10px;
+}
+
+/* === OVERLAY === */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,22,41,.45);
+  z-index: 998;
+  backdrop-filter: blur(2px);
+}
+
+/* === MOBILE === */
+@media (max-width: 991px) {
+  .admin-main { margin-left: 0; }
+  .sidebar { left: -240px; }
+  .sidebar-open { left: 0; }
+  .close-btn { display: block; border: none; background: transparent; color: rgba(255,255,255,.6); cursor: pointer; }
+  .menu-btn { display: block; }
+  .page-header { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .blog-form { padding: 20px; }
+}
+
+@media (max-width: 576px) {
+  .admin-content { padding: 16px; }
+  .topbar { padding: 0 16px; }
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .page-title { font-size: 20px; }
+  .blog-table th, .blog-table td { padding: 10px 12px; font-size: 13px; }
+}
