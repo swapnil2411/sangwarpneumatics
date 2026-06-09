@@ -132,8 +132,7 @@ export default function BlogsPage() {
                       <Image
                         src={blog.featuredImage}
                         alt={blog.title}
-                        width={
-                          80
+                        width={80
                         }
                         height={
                           60

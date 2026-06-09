@@ -46,21 +46,33 @@ export async function PUT(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = await params;
+  try {
+    const { id } = await params;
 
-  const body = await request.json();
+    const body = await request.json();
 
-  await adminDb
-    .collection("blogs")
-    .doc(id)
-    .update({
-      ...body,
-      updatedAt: new Date(),
+    await adminDb
+      .collection("blogs")
+      .doc(id)
+      .update({
+        ...body,
+        updatedAt: new Date(),
+      });
+
+    return NextResponse.json({
+      success: true,
     });
+  } catch (error: any) {
+    console.error("PUT ERROR:", error);
 
-  return NextResponse.json({
-    success: true,
-  });
+    return NextResponse.json(
+      {
+        success: false,
+        error: error?.message || "Unknown error",
+      },
+      { status: 500 }
+    );
+  }
 }
 
 export async function DELETE(
