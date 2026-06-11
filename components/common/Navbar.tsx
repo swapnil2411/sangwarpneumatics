@@ -97,6 +97,16 @@ export default function Navbar() {
 
                 <li>
                   <Link
+                    href="/blogs"
+                    className={pathname === "/blogs" || pathname.startsWith("/blogs/") ? "active" : ""}
+                    onClick={handleClose}
+                  >
+                    Blogs
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
                     href="/contact"
                     className={pathname === "/contact" ? "active" : ""}
                     onClick={handleClose}

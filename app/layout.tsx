@@ -191,6 +191,7 @@ export default async function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={`${roboto.className} h-full antialiased`}
     >
       <body className="min-h-full">
@@ -224,7 +225,7 @@ export default async function RootLayout({
             }}
           />
 
-          <RouteLoader />
+          {/* <RouteLoader /> */}
           {!isAdmin && <Navbar />}
           <main id="main-content">
   {children}

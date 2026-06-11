@@ -14,6 +14,9 @@ export async function POST(req: Request) {
       category: body.category,
       status: body.status || "Draft",
       author: "Sangawar Pneumatics",
+      comments: body.comments ?? true,
+      featured: body.featured ?? false,
+      seoIndexing: body.seoIndexing ?? true,
       createdAt: new Date(),
       updatedAt: new Date(),
     });

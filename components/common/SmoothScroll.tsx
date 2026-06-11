@@ -6,21 +6,25 @@ import Lenis from "lenis";
 export default function SmoothScroll() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
       smoothWheel: true,
     });
 
-    let rafId: number;
-
-    const raf = (time: number) => {
+    function raf(time: number) {
       lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    };
+      requestAnimationFrame(raf);
+    }
 
-    rafId = requestAnimationFrame(raf);
+    requestAnimationFrame(raf);
+
+    // Force recalculation when page content changes
+    const resizeObserver = new ResizeObserver(() => {
+      lenis.resize();
+    });
+
+    resizeObserver.observe(document.body);
 
     return () => {
-      cancelAnimationFrame(rafId);
+      resizeObserver.disconnect();
       lenis.destroy();
     };
   }, []);
