@@ -16,6 +16,7 @@ import { headers } from "next/headers";
 
 import { Toaster } from "react-hot-toast";
 import path from "path";
+import Preloader from "@/components/common/Preloader";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -216,7 +217,8 @@ export default async function RootLayout({
 
 
 
-        <RecaptchaProvider>
+        <Preloader>
+          <RecaptchaProvider>
           <SmoothScroll />
           <Toaster
             position="bottom-center"
@@ -225,13 +227,14 @@ export default async function RootLayout({
             }}
           />
 
-          {/* <RouteLoader /> */}
+          <RouteLoader />
           {!isAdmin && <Navbar />}
           <main id="main-content">
   {children}
 </main>
           {!isAdmin && <Footer />}
         </RecaptchaProvider>
+        </Preloader>
       </body>
     </html>
   );
