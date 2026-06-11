@@ -24,6 +24,11 @@ const ContentSecurityPolicy = `
     blob:
     https:;
 
+  media-src
+    'self'
+    blob:
+    https://res.cloudinary.com;
+
   font-src
     'self'
     data:

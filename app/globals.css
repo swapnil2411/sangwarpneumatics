@@ -25,6 +25,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
+:root {
+  --primary-font: var(--font-roboto);
+  --heading-font: var(--font-rethink);
+  --script-font: var(--font-dynalight);
+}
+
 html{
   scroll-behavior: smooth;
 }

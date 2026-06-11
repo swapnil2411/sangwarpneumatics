@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto, Dynalight, Rethink_Sans } from "next/font/google";
 import Script from "next/script";
 
 import RecaptchaProvider from "@/lib/RecaptchaProvider";
@@ -18,9 +18,24 @@ import { Toaster } from "react-hot-toast";
 import path from "path";
 import Preloader from "@/components/common/Preloader";
 
+
+
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+   variable: "--font-roboto",
+});
+
+const dynalight = Dynalight({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-dynalight",
+});
+
+const rethinkSans = Rethink_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-rethink",
 });
 
 export const metadata: Metadata = {
@@ -193,7 +208,7 @@ export default async function RootLayout({
       lang="en"
       suppressHydrationWarning
       data-scroll-behavior="smooth"
-      className={`${roboto.className} h-full antialiased`}
+      className={`${roboto.variable} ${rethinkSans.variable} h-full antialiased`}
     >
       <body className="min-h-full">
         {/* SEO Schema */}

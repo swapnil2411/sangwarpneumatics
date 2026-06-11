@@ -2,8 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
 }
+
+:root {
+  --primary-font: var(--font-roboto);
+  --heading-font: var(--font-rethink);
+  --script-font: var(--font-dynalight);
+}
+
 
 html, body{
     
@@ -28,8 +34,8 @@ html, body{
 /* INNER PAGE BANNER */
 .page_banner{
     width: 100%;
-    height: 250px;
-    background: url('/assets/page_banner.png') no-repeat center center/cover;
+    height: 350px;
+    background: url('/assets/page_banner.webp') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,6 +60,7 @@ html, body{
     position: relative;
     z-index: 1;
 }
+
 
 @media screen and (max-width: 768px){
     .page_banner{
@@ -300,7 +307,27 @@ html, body{
 
 /* HEADER CSS */
 header{
-    box-shadow: 0 1px 1px #e6e6e6;
+    /* box-shadow: 0 1px 1px #e6e6e6; */
+    position: fixed;
+    width: max-content;
+    z-index: 111;
+    top: 10px;
+    padding: 0 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 100px;
+    background: rgba(10, 25, 45, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  /* transition: all 0.3s ease; */
 }
 
 header.header_scrolled {
@@ -340,10 +367,18 @@ header.header_scrolled {
     padding: 0 15px;
 }
 
+.header_wrapper .menu_wrapper nav ul li a{
+    color: #a3a3a3;
+}
+
 .header_wrapper .menu_wrapper nav ul li a.active{
-    color: #0952BA;
+    color: #fff;
     font-weight: 600;
 }
+
+ header.header_scrolled .header_wrapper .menu_wrapper nav ul li a.active{
+    color: #0952BA;
+ }
 
 .header_repsonsice_icons {
     display: none;
@@ -383,8 +418,12 @@ header.header_scrolled {
     }
 
     header {
-        position: relative;
+        position: fixed;
         padding: 0 10px;
+        width: 100%;
+        top: 0;
+        border-radius: 0;
+        background: #fff
     }
 
     header.header_scrolled {
@@ -399,6 +438,10 @@ header.header_scrolled {
     /* smooth effect */
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.header_wrapper .menu_wrapper nav ul li a.active{
+    color: #0952BA;
 }
 
     /* --- MOBILE MENU: hidden state --- */
@@ -684,6 +727,24 @@ footer{
 
 .swiper-button-prev{
     left: 15px !important;
+}
+
+.hero_title span span {
+  font-family: var(--font-dynalight), cursive;
+  font-weight: 400;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  z-index: 0;
 }
 
 @media screen and (max-width: 1025px) {
