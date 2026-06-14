@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useService } from "@/services/useService";
 import SectionHeading from "@/components/common/SectionHeading";
+import BlogImage from "@/components/common/BlogImage";
 
 export default async function BlogsList() {
   const service = useService();
@@ -35,11 +36,11 @@ export default async function BlogsList() {
               >
                 {/* Featured Image */}
                 <figure className="image_wrapper">
-                  <img
-                    src={blog.featuredImage}
-                    alt={blog.title}
-                  />
-                </figure>
+  <BlogImage
+    src={blog.featuredImage}
+    alt={blog.title}
+  />
+</figure>
 
                 {/* Category */}
                 <span className="blog_category">

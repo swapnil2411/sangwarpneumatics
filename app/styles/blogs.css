@@ -1,7 +1,21 @@
 .blogs_content_wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .blogs_content_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .blogs_content_wrapper {
+        grid-template-columns: 1fr;
+    }
 }
 
 .blog_col{
@@ -72,7 +86,7 @@
 
 /* Blog Details CSS */
 .blog-details {
-  padding: 80px 0;
+  /* padding: 80px 0; */
 }
 
 

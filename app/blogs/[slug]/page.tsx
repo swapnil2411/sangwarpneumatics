@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "../../styles/blogs.css"
 import { useService } from "@/services/useService";
+import PageBanner from "@/components/common/PageBanner";
 
 export default async function BlogDetailsPage({
   params,
@@ -22,7 +23,12 @@ export default async function BlogDetailsPage({
   const blog = data.blog;
 
   return (
-    <section className="blog-details">
+    <>
+      <PageBanner
+      title={blog.title}
+      subtitle={blog.category}
+    />
+    <section className="blog-details sec_pad">
       <div className="container">
 
         {/* Breadcrumb */}
@@ -117,5 +123,6 @@ export default async function BlogDetailsPage({
 
       </div>
     </section>
+    </>
   );
 }
