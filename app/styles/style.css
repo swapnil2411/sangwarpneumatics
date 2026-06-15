@@ -64,7 +64,7 @@ html, body{
 
 @media screen and (max-width: 768px){
     .page_banner{
-        height: 200px;
+        height: 280px;
     }
 
     .page_banner .page_title{
@@ -437,11 +437,18 @@ header.header_scrolled {
     padding: 0 10px;
     /* smooth effect */
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    /* box-shadow: 0 10px 30px rgba(0,0,0,0.1); */
 }
 
 .header_wrapper .menu_wrapper nav ul li a.active{
     color: #0952BA;
+}
+
+.header_wrapper .logo_wrapper .logo {
+    max-width: 60px;
+}
+.header_wrapper{
+    padding: 5px 0;
 }
 
     /* --- MOBILE MENU: hidden state --- */
