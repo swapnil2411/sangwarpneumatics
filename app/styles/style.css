@@ -306,7 +306,7 @@ html, body{
  
 
 /* HEADER CSS */
-header{
+header.website_header{
     /* box-shadow: 0 1px 1px #e6e6e6; */
     position: fixed;
     width: max-content;

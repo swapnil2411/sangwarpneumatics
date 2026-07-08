@@ -210,6 +210,11 @@ export default async function RootLayout({
       data-scroll-behavior="smooth"
       className={`${roboto.variable} ${rethinkSans.variable} h-full antialiased`}
     >
+      <Script
+    src="https://analytics.ahrefs.com/analytics.js"
+    data-key="TnE9vpwWDtImHwy1XTZ4rQ"
+    strategy="afterInteractive"
+  />
       <body className="min-h-full">
         {/* SEO Schema */}
         <Script

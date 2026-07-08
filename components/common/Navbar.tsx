@@ -26,7 +26,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={isScrolled ? "header_scrolled" : ""}>
+    <header className={isScrolled ? "header_scrolled website_header" : "website_header"}>
       <div className="container">
         <div className="header_wrapper">
 
