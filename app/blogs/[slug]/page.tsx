@@ -26,7 +26,6 @@ export default async function BlogDetailsPage({
     <>
       <PageBanner
       title={blog.title}
-      subtitle={blog.category}
     />
     <section className="blog-details sec_pad">
       <div className="container">
